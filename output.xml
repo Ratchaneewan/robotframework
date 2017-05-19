@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170519 16:12:54.830" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="D:\robotframework\epit.robot" id="s1" name="Epit">
+<test id="s1-t1" name="Check alert box">
+<kw name="Open page">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>https://epit.rd.go.th/EFILING/RegController?PRGID=R008T</arg>
+<arg>browser=gc</arg>
+</arguments>
+<msg timestamp="20170519 16:12:54.970" level="INFO">Opening browser 'gc' to base url 'https://epit.rd.go.th/EFILING/RegController?PRGID=R008T'</msg>
+<status status="PASS" endtime="20170519 16:13:01.882" starttime="20170519 16:12:54.970"></status>
+</kw>
+<status status="PASS" endtime="20170519 16:13:01.882" starttime="20170519 16:12:54.970"></status>
+</kw>
+<kw name="Select Thai Nationality">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>สัญชาติไทย</arg>
+</arguments>
+<msg timestamp="20170519 16:13:01.883" level="INFO">Clicking link 'สัญชาติไทย'.</msg>
+<status status="PASS" endtime="20170519 16:13:03.802" starttime="20170519 16:13:01.883"></status>
+</kw>
+<status status="PASS" endtime="20170519 16:13:03.802" starttime="20170519 16:13:01.883"></status>
+</kw>
+<kw name="Select OK Button">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="bOK1"]</arg>
+</arguments>
+<msg timestamp="20170519 16:13:03.804" level="INFO">Clicking element 'xpath=//*[@id="bOK1"]'.</msg>
+<status status="PASS" endtime="20170519 16:13:03.873" starttime="20170519 16:13:03.803"></status>
+</kw>
+<status status="PASS" endtime="20170519 16:13:03.873" starttime="20170519 16:13:03.803"></status>
+</kw>
+<kw name="Check E011">
+<kw name="Get Alert Message" library="Selenium2Library">
+<doc>Returns the text of current JavaScript alert.</doc>
+<assign>
+<var>${result}</var>
+</assign>
+<msg timestamp="20170519 16:13:03.892" level="INFO">${result} = ข้อความปฏิเสธ [E011] :  กรุณาบันทึกทึกเลขประจำตัวผู้เสียภาษีอากร</msg>
+<status status="PASS" endtime="20170519 16:13:03.892" starttime="20170519 16:13:03.873"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${result}</arg>
+<arg>E011</arg>
+</arguments>
+<status status="PASS" endtime="20170519 16:13:03.893" starttime="20170519 16:13:03.893"></status>
+</kw>
+<status status="PASS" endtime="20170519 16:13:03.893" starttime="20170519 16:13:03.873"></status>
+</kw>
+<kw name="Check logout Button">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="bExit1"]</arg>
+</arguments>
+<msg timestamp="20170519 16:13:03.895" level="INFO">Clicking element 'xpath=//*[@id="bExit1"]'.</msg>
+<status status="PASS" endtime="20170519 16:13:04.017" starttime="20170519 16:13:03.894"></status>
+</kw>
+<status status="PASS" endtime="20170519 16:13:04.017" starttime="20170519 16:13:03.894"></status>
+</kw>
+<kw name="Select cancel Button">
+<kw name="Choose Cancel On Next Confirmation" library="Selenium2Library">
+<doc>Cancel will be selected the next time `Confirm Action` is used.</doc>
+<status status="PASS" endtime="20170519 16:13:04.018" starttime="20170519 16:13:04.018"></status>
+</kw>
+<kw name="Confirm Action" library="Selenium2Library">
+<doc>Dismisses currently shown confirmation dialog and returns it's message.</doc>
+<status status="PASS" endtime="20170519 16:13:04.028" starttime="20170519 16:13:04.018"></status>
+</kw>
+<status status="PASS" endtime="20170519 16:13:04.029" starttime="20170519 16:13:04.017"></status>
+</kw>
+<status status="PASS" endtime="20170519 16:13:04.029" critical="yes" starttime="20170519 16:12:54.970"></status>
+</test>
+<status status="PASS" endtime="20170519 16:13:04.031" starttime="20170519 16:12:54.830"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Epit" pass="1">Epit</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
